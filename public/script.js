@@ -58,7 +58,7 @@ function renderArtists(artists) {
 
   artists.forEach(artist => {
     const genres = artist.tags?.tag?.map(tag => tag.name).join(' · ') || 'Unknown genre';
-    const imageUrl = artist.image?.find(img => img.size === 'medium')?.['#text'] || 'https://via.placeholder.com/300x200    ';
+    const imageUrl = artist.image?.find(img => img.size === 'medium')?.['#text'] || 'https://via.placeholder.com/300x200';
 
     const artistHTML = `
       <div class="artist-item">
@@ -86,7 +86,8 @@ function renderTracks(tracks) {
 
   tracks.forEach(track => {
     const artist = track.artist?.name || 'Unknown artist';
-    const imageUrl = track.image?.find(img => img.size === 'medium')?.['#text'] || 'https://via.placeholder.com/300x200    ';
+    const imageUrl = track.image?.find(img => img.size === 'medium')?.['#text'] || '';
+    const genres = track.tags?.tag?.map(tag => tag.name).join(' · ') || 'Unknown genre';
 
     const trackHTML = `
       <div class="track-item">
@@ -94,7 +95,7 @@ function renderTracks(tracks) {
         <div class="track-info">
           <div class="track-title">${track.name}</div>
           <div class="track-artist">${artist}</div>
-          <div class="track-genres">rap · hip hop · alternative</div>
+          <div class="track-genres">${genres}</div>
         </div>
       </div>
     `;
