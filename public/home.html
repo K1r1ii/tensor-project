@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="search_style.css">
-    <title>Lost.fm Search Results</title>
-
+    <link rel="stylesheet" href="style.css" >
+    <title>Lost.fm Music</title>
 </head>
 <body>
     <header>
@@ -13,14 +12,14 @@
             <button><img src="https://www.last.fm/static/images/playbar/previous_track.1e1b1fccec35.svg" alt="previous"></button>
             <button><img class="start-image" src="https://img.icons8.com/?size=100&id=25603&format=png&color=ffffff" alt="stop/play"></button>
             <button><img class="rotate_icon" src="https://www.last.fm/static/images/playbar/previous_track.1e1b1fccec35.svg" alt="next"></button>
-            <button><img class="like-logo" src="https://img.icons8.com/?size=100&id=53TQ8096ZRdz&format=png&color=999999" alt="like"></button>
+            <button class="custom-button"><img class="like-logo" src="https://img.icons8.com/?size=100&id=53TQ8096ZRdz&format=png&color=999999" alt="like"></button>
         </div>
         <div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Lastfm_logo.svg" alt="logo"></div>
         <div class="nav-menu">
-            <a href="search.html"><img src="https://www.last.fm/static/images/icons/search/search_16.9c1d552b8f55.svg" alt="поиск"></a>
-            <a href="home.html">Home</a>
+            <a href="search.html" class="search-icon"><img src="https://www.last.fm/static/images/icons/search/search_16.9c1d552b8f55.svg" alt="поиск"></a>
+            <a href="#">Home</a>
             <a href="#">Live</a>
-            <a href="home.html">Music</a>
+            <a href="#">Music</a>
             <a href="#">Charts</a>
             <a href="#">Events</a>
             <a href="#">Features</a>
@@ -28,65 +27,35 @@
         <div class="profile-icon"></div>
     </header>
 
-    <main class="container">
-        <section class="search-results">
-            <h1 class="search-query"></h1>
-            <div class="tabs">
-                <div class="tab active-tab">Top Results</div>
-                <div class="tab">Artists</div>
-                <div class="tab">Albums</div>
-                <div class="tab">Tracks</div>
-            </div>
-            <div class="search-bar">
-                <input type="text" class="search-input" value="never gonna give you up">
-                <button class="search-btn"><img src="https://www.last.fm/static/images/icons/search/search_232323_16.fd4564f92909.png" alt="поиск"></button>
-            </div>
+    <main>
+        <h1>Music</h1>
+
+        <section class="hot-now">
+            <div>Hot right now</div>
         </section>
 
-        <section class="artists-section">
-            <h2>Artists</h2>
-            <div class="items-grid artists">
-                <div class="item">
-                    <img src="#" alt="" class="item-image">
-                    <div class="item-overlay">
-                        <h3 class="item-name">Never Gonna Give You Up</h3>
-                        <p class="item-desc">1,751 listeners</p>
-                    </div>
-                </div>
+        <div class="artists-grid">
+            <div class="artist-item">
+                <img src="#" alt="Kanye West" class="artist-image">
+                <div class="artist-name">Kanye West</div>
+                <div class="genres">hip-hop · rap · hip hop</div>
             </div>
-            <div class="more-items"><a href="#">More artists →</a></div>
+        </div>
+
+        <section class="popular-tracks">
+            <div>Popular tracks</div>
         </section>
 
-        <section class="albums-section">
-            <h2>Albums</h2>
-            <div class="items-grid albums">
-                <div class="item">
-                    <img src="#" alt="" class="item-image">
-                    <div class="item-overlay" >
-                        <h3 class="item-name">Never Gonna Give You Up</h3>
-                        <p class="item-desc">Mac Beez</p>
-                    </div>
+        <div class="tracks-grid">
+            <div class="track-item">
+                <img src="#" alt="Track 1" class="track-image">
+                <div class="track-info">
+                    <div class="track-title">SEXY NUKIM (feat. RM of BTS)</div>
+                    <div class="track-artist">Balming Tiger</div>
+                    <div class="track-genres">rap · hip hop · alternative</div>
                 </div>
             </div>
-            <div class="more-items"><a href="#">More albums →</a></div>
-        </section>
-
-        <section class="tracks-section">
-            <h2>Tracks</h2>
-            <div class="track-list">
-                <div class="track-item">
-                    <div class="track-play"><button class="custom-button"><img class="start-image" src="https://img.icons8.com/?size=100&id=59862&format=png&color=000000" alt="start/stop"></button></div>
-                    <img src="#" alt="" class="track-image">
-                    <button class="custom-button"><img class="like-logo" src="https://img.icons8.com/?size=100&id=53TQ8096ZRdz&format=png&color=999999" alt="like"></button>
-                    <div class="track-details">
-                        <h3 class="track-title">Never Gonna Give You Up</h3>
-                        <p class="track-artist">Rick Astley</p>
-                        <p class="track-duration">2:15</p>
-                    </div>
-                </div>
-            </div>
-            <div class="more-tracks"><a href="#">More tracks →</a></div>
-        </section>
+        </div>
     </main>
 
     <footer>
@@ -151,7 +120,8 @@
             CBS Interactive © 2022 Last.fm Ltd. All rights reserved. 
             Terms of Use · Privacy Policy · Legal Policies · Cookies Policy · Do Not Sell My Personal Information
         </div>
+        <img src="https://via.placeholder.com/40x40 " alt="OS Icon" class="os-icon">
     </footer>
-    <script src="search_script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
